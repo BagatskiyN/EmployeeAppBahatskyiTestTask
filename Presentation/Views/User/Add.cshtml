@@ -1,0 +1,19 @@
+﻿@using Presentation.Models.Requests
+
+@model CreateUserRequest
+
+<form id="createUserForm" asp-action="Add" method="post">
+    <div class="form-group">
+        <label asp-for="Username"></label>
+        <input id="username" asp-for="Username" class="form-control" />
+        <span asp-validation-for="Username" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input id="password" asp-for="Password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create User</button>
+</form>
